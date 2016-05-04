@@ -63,5 +63,6 @@ fis3 release dist
 
 ## 常见问题
 
-- `node-sass`安装失败
+- `node-sass` 安装失败
+- `[WARNI] csssprites does not support your node` [fis某版本bug](https://github.com/fex-team/fis-spriter-csssprites/issues/27#issuecomment-204300858)
 
