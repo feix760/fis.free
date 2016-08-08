@@ -36,17 +36,15 @@ npm install -g fis-parser-imweb-tpl fis-postprocessor-autoprefixer fis3-deploy-l
 ### 运行开发dev
 
 ```sh
-fis3 release dev -w -c
+npm start
 ```
-
-*PS: -w, watch; -c, 清理一次缓存*
 
 之后将生成dev目录, 使用`Fiddler`将线上url资源替换至此目录，具体规则请参考项目的READMD.md
 
 ### 运行发布dist
 
 ```sh
-fis3 release dist
+npm run build
 ```
 
 ### 新项目脚手架
@@ -55,13 +53,17 @@ fis3 release dist
 
 项目使用[Lego](Lego.md)进行公用组件的管理安装
 
+## React
+
+项目使用[React](react.md)
+
 ## 模块化
 
-项目使用[Ques](Ques.md)进行页面的模块化开发
+老项目使用[Ques](Ques.md)进行页面的模块化开发
 
 ## MVVM
 
-项目使用[Qjs](Qjs.md)实现MVVM
+老项目使用[Qjs](Qjs.md)实现MVVM
 
 ## 常见问题
 
