@@ -31,8 +31,7 @@ fis.unhook('components')
         ],
         moduleId: '$1',
         parser: fis.plugin('babel-6.x', {
-            presets: ['react', 'es2015-loose', 'stage-0']
-            // presets: ['babel-preset-react', 'babel-preset-es2015-loose', 'babel-preset-stage-0'].map(require.resolve)
+            presets: ['react', ['es2015', {'loose': true}], 'stage-0']
         })
     })
     .match('::package', {
