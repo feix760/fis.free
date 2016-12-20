@@ -9,9 +9,11 @@
 - [常见问题](#常见问题)
 - [插件列表](Plugins.md)
 
+*注意：为了安装的顺利进行，保险的方式是先卸载原来node, 删除C:\Users\用户名\AppData\Roaming下的npm, npm-cache目录*
+
 ## 安装NODE
 
-官网下载node版本6.x即可
+官网下载安装node版本6.x即可
 
 ```
 node --version
@@ -35,6 +37,8 @@ node --version
 proxy=http://dev-proxy.oa.com:8080/
 ```
 
+*建议：不需要使用tnpm, 配置好npm的代理即可*
+
 ### 设置NODE_PATH
 
 - Windows 
@@ -55,11 +59,21 @@ npm install -g fis3
 
 ## 安装fis-parser-node-sass
 
-`fis-parser-node-sass`依赖`node-sass`, `node-sass`的编译在windows上很麻烦
+`fis-parser-node-sass`依赖`node-sass`, 如果需要编译`node-sass`容易失败
+
+*注意：不可安装fis3-parser-node-sass, 此组件已停止维护*
+
+### 安装
+
+```sh
+npm install -g fis-parser-node-sass
+```
+
+一般情况下可以直接下载到*.node文件顺利安装，如果安装因编译失败请转至下一步
 
 ### 编译准备
 
-- 安装python 2.X, *注意安装3.X无效, gyp不支持*
+- 安装python 2.X, *注意：安装3.X无效, gyp不支持*
     - 安装之后需检查环境变量path是否有类似`C:\Python27;C:\Python27\Scripts;`的值, 没有自己添加
 - 安装`.NET Framework SDK`
     - 下载地址https://www.microsoft.com/en-hk/download/details.aspx?id=19988
@@ -68,8 +82,6 @@ npm install -g fis3
 ### 无法编译迂回
 
 安装最新版的`node-sass`, 一般情况下是不需要编译的，可以直接下载到已编译好了的.node文件
-
-`fis-parser-node-sass`不是很靠谱，里面的node-sass版本写死了, 安装依赖node-sass时一般容易编译失败
 
 我的做法是:
 - 全局安装node-sass
@@ -91,7 +103,7 @@ npm install -g fis3-hook-commonjs fis3-postpackager-loader fis3-deploy-replace \
 
 ```sh
 npm install -g babel-cli babel-preset-es2015 babel-preset-es2015-loose \
-    babel-preset-react babel-preset-stage-0 fis-parser-babel-6.x
+    babel-preset-react babel-preset-stage-0 fis-parser-babel-6.x fis3-parser-babel
 ```
 
 ### 其它
@@ -101,7 +113,7 @@ npm install -g fis3-deploy-html-inline-merge fis3-deploy-pack fis3-hook-annotati
     fis3-hook-lego fis3-postpackager-inline fis3-postpackager-loader-common \
     fis3-postprocessor-autoprefixer fis3-preprocessor-js-require-css \
     fis3-preprocessor-js-require-file fis-optimizer-htmlmin fis-optimizer-png-compressor \
-    fis-parser-imweb-tpl
+    fis-parser-imweb-tpl fis-spriter-csssprites-group 
 ```
 
 ## 试跑demo
