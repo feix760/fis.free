@@ -42,10 +42,13 @@ proxy=http://dev-proxy.oa.com:8080/
 ### 设置NODE_PATH
 
 - Windows 
-<br>`我的电脑右击 -> 属性 -> 高级系统设置 -> 环境变量 -> 系统变量一栏点新建`
+`我的电脑右击 -> 属性 -> 高级系统设置 -> 环境变量 -> 系统变量一栏点新建`
 <br>变量名: `NODE_PATH`
 <br>变量值: `C:\Users\用户名\AppData\Roaming\npm\node_modules`
-<br>*注意：tnpm全局安装会安装至nodejs安装目录下，例如C:\Program Files\nodejs\node_modules, 使用tnpm时需要将此目录也加入NODE_PATH(用;分割多个路径)*
+<br>注意: tnpm全局安装默认会安装至nodejs安装目录下，例如C:\Program Files\nodejs\node_modules, 两个解决办法:
+    - 1, 需要将此目录也加入NODE_PATH, 用;分割多个路径
+    - 2, 使用`tnpm config set prefix="C:\Users\用户名\AppData\Roaming\npm"`纠正安装目录
+
 - Mac/Linux
 <br>在`.profile`文件导入
 ```sh
