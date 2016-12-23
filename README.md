@@ -100,6 +100,8 @@ npm install -g fis3-hook-commonjs fis3-postpackager-loader fis3-deploy-replace \
     fis3-deploy-skip-packed fis3-hook-node_modules
 ```
 
+*注意: Windows CMD不支持\续行，请将\去除并合并成一行再粘贴至CMD运行*
+
 ### react相关
 
 ```sh
